@@ -6,7 +6,7 @@ The diagnosis of drug-target interaction is an important step in the discovery o
 * We downloaded drugBank dataset from https://www.drugbank.ca/releases/latest
 
 ## Prepare data
-* Since the dataset is an XML file, we had to extract information about drugs from it. To do this, we extracted our data by using parse.ipynb file.
+* Since the dataset is an XML file, we had to extract information about drugs from it. To do this, we extracted our data by using parse.ipynb file from dhimmel/drugbank repository.
 
 * We need only two columns of this CSV file that contains drug_id and uniprot_id. Each drug has a unique uniprot_id, while it isn't a number. We generated numbers for each drug_id and uniprot_id. Then, we added a fixed amount(equal to the count of drugs) to each of the numbers determined for targets. Finally, we generated negative label data equal to the number of main data.
 
@@ -23,4 +23,3 @@ In this step, we used one of the items below to convert two vectors(one for drug
  
 ## Use SVM as a classifier
 * In the final step, we used SVM(Support Vector Machine) for classifying DTIs. Initial precision without adjusting SVM hyperparameters is 63%.
-# DTIs-prediction-by-DeepWalk-on-DrugBank
